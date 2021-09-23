@@ -6,9 +6,9 @@ const App = () => {
     <div className="App">
       <ul>
         <li>aarwwwwww</li>
-        <li>taaaaaa</li>
+        <li>ooooooooooooooooo</li>
         <li>y</li>
-        <li>oooooooooooooooooooooo</li>
+        <li>oooooooкакпкпooooooooooooooo</li>
         <li>h</li>
       </ul>
     </div>
