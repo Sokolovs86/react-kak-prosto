@@ -1,18 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./Header.js";
+import Technologies from "./Technologies.js";
 
 const App = () => {
   return (
-    <div className="App">
-      <ul>
-        <li>22222222222221111112222</li>
-        <li>ooooooooooooooooo</li>
-        <li>ytttttttttttttttt</li>
-        <li>oooooooкакпкпooooooooooooooo</li>
-        <li>h</li>
-      </ul>
+    <div>
+      <Header />
+      <Technologies />
     </div>
   );
-}
+};
 
 export default App;
