@@ -1,16 +1,13 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './Header.js';
+import Technologies from './Technologies.js';
 
 const App = () => {
   return (
-    <div className="App">
-      <ul>
-        <li>111111116666661111111</li>
-        <li>ooooooееееooooooo</li>
-        <li>yfffffwwwwwwwwwwfffffffffff</li>
-        <li>oooooooкакпкпooooooooooooooo</li>
-        <li>h</li>
-      </ul>
+    <div>
+      <Header />
+      <Technologies />
     </div>
   );
 }
