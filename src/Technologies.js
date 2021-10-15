@@ -3,10 +3,10 @@ import React from "react";
 const Technologies = () => {
   return (
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>Home</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>React</li>
     </ul>
   );
 };
