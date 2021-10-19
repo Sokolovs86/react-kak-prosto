@@ -1,13 +1,8 @@
 import React from "react";
-import ss from "./Profile.module.css";
+import ss from "./MyPosts.module.css";
 
-const Profile = () => {
+const MyPosts = () => {
   return (
-    <div className={ss.content}>
-      <div>
-        <img src="https://pbs.twimg.com/media/E_NfXvgX0AEN1sc.jpg" alt="" />
-      </div>
-      <div>ava + discription</div>
       <div>
         My posts
         <div>New post</div>
@@ -16,8 +11,7 @@ const Profile = () => {
           <div className={ss.item}>post 2</div>
         </div>
       </div>
-    </div>
   );
 };
 
-export default Profile;
+export default MyPosts;
