@@ -1,21 +1,21 @@
 import React from "react";
 import ss from "./MyPosts.module.css";
+import Post from "./Post/Post";
 
 const MyPosts = () => {
   return (
+    <div>
+      My posts
       <div>
-        My posts
-        <div>
-          New post
-        </div>
-        <div className={ss.posts}>
-          <div className={ss.item}>
-            post 1
-          </div>
-          <div className={ss.item}>
-            post 2
-          </div>
-        </div>
+        <textarea></textarea>
+        <button>Add post</button>
+      </div>
+      <div className={ss.posts}>
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+      </div>
       </div>
   );
 };
