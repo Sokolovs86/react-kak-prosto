@@ -11,9 +11,9 @@ const Post = (props) => {
         src="https://i2.wp.com/nikitafilimonov.ru/wp-content/uploads/2016/11/avatar_23o.jpg?w=1740"
         alt=""
       />
-       { props.message }
-      <div>like
-          { props.likeCount }  
+      {props.message}
+      <div>
+        <span>like{props.likeCount}</span>
       </div>
     </div>
   );
