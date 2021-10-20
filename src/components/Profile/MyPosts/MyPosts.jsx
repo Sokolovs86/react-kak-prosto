@@ -11,12 +11,12 @@ const MyPosts = () => {
         <button>Add post</button>
       </div>
       <div className={ss.posts}>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        <Post likeCount={15} message={"Hi, how are you?"} />
+        <Post likeCount={20} message={"Cool, I'am the best"} />
+        <Post likeCount={15} />
+        <Post likeCount={20} />
       </div>
-      </div>
+    </div>
   );
 };
 
