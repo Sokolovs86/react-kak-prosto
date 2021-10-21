@@ -1,12 +1,5 @@
 import React from 'react';
 import ss from './Navbar.module.css';
-console.log(ss);
-
-// let ss = {
-//   "nav": "Navbar_nav__15Bhy",
-//   "item": "Navbar_item__tB9LK",
-//   "active" : "NavbarBLAbla_active"
-// };
 
 let c1 = "item";
 let c2 = "active";
@@ -19,10 +12,10 @@ const Navbar = () => {
   return (
     <nav className={ss.nav}>
       <div className={ss.item}>
-        <a>Profile</a>
+        <a href="/profile">Profile</a>
       </div>
       <div className={`${ss.item} ${ss.active}`}>
-        <a>Messages</a>
+        <a href="/dialogs">Messages</a>
       </div>
       <div className={ss.item}>
         <a href="#">News</a>
