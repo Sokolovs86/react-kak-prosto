@@ -4,13 +4,10 @@ import ss from "./ProfileInfo.module.css";
 const ProfileInfo = () => {
   return (
     <div>
-      <div></div>
-      <ProfileInfo />
-
       <div>
-        <img src="https://pbs.twimg.com/media/E_NfXvgX0AEN1sc.jpg" alt="" />
+        <img src='https://avatarko.ru/img/kartinka/33/multfilm_lyagushka_32117.jpg' />
       </div>
-      <div>ava + discription</div>
+      <div>ava + description</div>
     </div>
   );
 };
