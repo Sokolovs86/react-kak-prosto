@@ -2,12 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import ss from "./Navbar.module.css";
 
-let c1 = "item";
-let c2 = "active";
-// "item active"
-let classes = c1 + "" + c2;
-// let classesNew = `${c1} ${c2}`;
-let classesNew = `${ss.item} ${ss.active}`;
+// let c1 = "item";
+// let c2 = "active";
+// // "item active"
+// let classes = c1 + "" + c2;
+// // let classesNew = `${c1} ${c2}`;
+// let classesNew = `${ss.item} ${ss.active}`;
 
 const Navbar = () => {
   return (
