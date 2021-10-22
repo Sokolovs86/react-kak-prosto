@@ -14,7 +14,7 @@ const DialogItem = (props) => {
 }
 
 const Message = (props) => {
-   return <div className={ss.message}>{props.message}</div>;
+    return <div className={ss.message}>{props.message}</div>;
 }
 
 const Dialogs = (props) => {
@@ -32,7 +32,7 @@ const Dialogs = (props) => {
         <Message message="Hi Hi" />
         <Message message="Hello" />
         <Message message="Hello pa" />
-        <Message message="Hello ma" />
+        <Message message="Yo" />
       </div>
     </div>
   );
