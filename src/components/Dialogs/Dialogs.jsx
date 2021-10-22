@@ -22,11 +22,11 @@ const Dialogs = (props) => {
         </div>
       </div>
     <div className="messages">
-      <div className="message"></div>
-      <div className="messags"></div>
-      <div className="message"></div>
-      <div className="message"></div>
-      <div className="message"></div>
+      <div className="message">Hi</div>
+      <div className="messags">Hi Hi</div>
+      <div className="message">Hello</div>
+      <div className="message">Hello pa</div>
+      <div className="message">Hello ma</div>
     </div>
     </div>
   );
