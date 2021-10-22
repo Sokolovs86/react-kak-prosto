@@ -1,6 +1,6 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import ss from './Navbar.module.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import ss from "./Navbar.module.css";
 
 let c1 = "item";
 let c2 = "active";
@@ -39,6 +39,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

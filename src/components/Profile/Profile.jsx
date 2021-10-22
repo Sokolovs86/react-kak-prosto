@@ -6,11 +6,9 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 const Profile = () => {
   return (
     <div>
-
       <ProfileInfo />
-      
       <MyPosts />
-
+      <div>ava + discription</div>
     </div>
   );
 };
