@@ -5,7 +5,7 @@ const Dialogs = (props) => {
   return (
     <div className={ss.dialogs}>
       <div className={ss.dialogsItems}>
-        <div className={ss.dialog}>
+        <div className={ss.dialog + ' ' + ss.active}>
           Andrei
         </div>
         <div className={ss.dialog}>
