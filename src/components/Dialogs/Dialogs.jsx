@@ -49,15 +49,10 @@ const Dialogs = (props) => {
   return (
     <div className={ss.dialogs}>
       <div className={ss.dialogsItems}>
-
-        {dialogsElements}
-
-        {/* <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
-        <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} /> */}
+          {dialogsElements}
       </div>
       <div className={ss.messages}>
-        {/* <Message message={messagesData[0].message} />
-        <Message message={messagesData[1].message} /> */}
+          {messagesElements}
       </div>
     </div>
   );
