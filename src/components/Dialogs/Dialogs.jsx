@@ -37,6 +37,10 @@ const Dialogs = (props) => {
     { id: 5, message: "Yo" },
   ];
     
+  let messagesElements = messagesData.map((message) => (
+    <Message message={message.message} />
+  ));
+
     // let d= {
     //   id: 2,
     //   name: 'Dimas',
