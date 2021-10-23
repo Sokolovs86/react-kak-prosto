@@ -18,12 +18,20 @@ const Message = (props) => {
 
 const Dialogs = (props) => {
 
-  let DialogsData = [
+  let dialogsData = [
     {id: 1, name: 'Andrei'}, 
     {id: 2, name: 'Dima'}, 
     {id: 3, name: 'Artem'}, 
     {id: 4, name: 'Lev'}, 
     {id: 5, name: 'Petr'}, 
+  ];
+
+  let messagesData = [
+    { id: 1, name: "Hi" },
+    { id: 2, name: "Hi Hi" },
+    { id: 3, name: "Hello" },
+    { id: 4, name: "Hello pa" },
+    { id: 5, name: "Yo" },
   ];
     
     // let d= {
@@ -34,11 +42,8 @@ const Dialogs = (props) => {
   return (
     <div className={ss.dialogs}>
       <div className={ss.dialogsItems}>
-        <DialogItem name="Andrei" id="1" />
-        <DialogItem name="Dima" id="2" />
-        <DialogItem name="Artem" id="3" />
-        <DialogItem name="Lev" id="4" />
-        <DialogItem name="Petr" id="5" />
+        <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
+        <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />
       </div>
       <div className={ss.messages}>
         <Message message="Hi" />
