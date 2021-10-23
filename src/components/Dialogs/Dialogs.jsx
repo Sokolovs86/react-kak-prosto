@@ -46,11 +46,8 @@ const Dialogs = (props) => {
         <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />
       </div>
       <div className={ss.messages}>
-        <Message message="Hi" />
-        <Message message="Hi Hi" />
-        <Message message="Hello" />
-        <Message message="Hello pa" />
-        <Message message="Yo" />
+        <Message message={messagesData[0].message} />
+        <Message message={messagesData[1].message} />
       </div>
     </div>
   );
