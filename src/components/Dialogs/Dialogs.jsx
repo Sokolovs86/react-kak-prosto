@@ -27,11 +27,11 @@ const Dialogs = (props) => {
   ];
 
   let messagesData = [
-    { id: 1, name: "Hi" },
-    { id: 2, name: "Hi Hi" },
-    { id: 3, name: "Hello" },
-    { id: 4, name: "Hello pa" },
-    { id: 5, name: "Yo" },
+    { id: 1, message: "Hi" },
+    { id: 2, message: "Hi Hi" },
+    { id: 3, message: "Hello" },
+    { id: 4, message: "Hello pa" },
+    { id: 5, message: "Yo" },
   ];
     
     // let d= {
