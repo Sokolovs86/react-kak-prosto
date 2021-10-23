@@ -18,7 +18,13 @@ const Message = (props) => {
 
 const Dialogs = (props) => {
 
-  let DialogsData = [{id: 1, name: 'Andrei'}, {id: 2, name: 'Dima'}, ];
+  let DialogsData = [
+    {id: 1, name: 'Andrei'}, 
+    {id: 2, name: 'Dima'}, 
+    {id: 3, name: 'Artem'}, 
+    {id: 4, name: 'Lev'}, 
+    {id: 5, name: 'Petr'}, 
+  ];
     
     // let d= {
     //   id: 2,
