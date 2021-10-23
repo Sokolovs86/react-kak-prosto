@@ -5,8 +5,8 @@ import Post from "./Post/Post";
 const MyPosts = () => {
 
   let postsData = [
-    { id: 1, post: "Hi, how are you?", likeCount: 15 },
-    { id: 2, post: "Cool, I'am the best", likeCount: 20 },
+    { id: 1, message: "Hi, how are you?", likesCount: 15 },
+    { id: 2, message: "Cool, I'am the best", likesCount: 20 },
   ];
 
   return (
@@ -21,8 +21,8 @@ const MyPosts = () => {
         </div>
       </div>
       <div className={ss.posts}>
-        <Post post={postsData[0].post} likesCount={postsData[0].likeCount} id={postsData[0].id} />
-        <Post post={postsData[1].post} likesCount={postsData[1].likeCount} id={postsData[1].id} />
+        <Post message={postsData[0].message} likesCount={postsData[0].likesCount} />
+        <Post message={postsData[1].message} likesCount={postsData[1].likesCount} />
         {/* <Post likesCount="15" message={"Hi, how are you?"} />
         <Post likesCount={20} message={"Cool, I'am the best"} />
         <Post message={"Help me"} likesCount={10} />
