@@ -37,8 +37,8 @@ const Dialogs = (props) => {
   let dialogsElements = dialogsData
   .map( d => <DialogItem name={d.name} id={d.id} /> );
 
-  let messagesElements = messages.map((message) => (
-    <Message message={message.message} />
+  let messagesElements = messages.map((m) => (
+    <Message message={m.message} />
   ));
 
     // let d= {
