@@ -22,11 +22,11 @@ const App = () => {
           <Route path="/music" component={Music} />
           <Route path="/settings" component={Settings} />
 
-          <Route path="/dialogs" render={() => {}} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/news" component={News} />
-          <Route path="/music" component={Music} />
-          <Route path="/settings" component={Settings} />
+          <Route path="/dialogs" render={() => <Dialogs />} />
+          <Route path="/dialogs" render={() => <Profile />} />
+          <Route path="/dialogs" render={() => <News />} />
+          <Route path="/dialogs" render={() => <Music />} />
+          <Route path="/dialogs" render={() => <Settings />} />
         </div>
       </div>
     </BrowserRouter>
