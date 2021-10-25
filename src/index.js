@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Dialogs from './components/Dialogs/Dialogs';
 
 let posts = [
   { id: 1, message: "Hi, how are you?", likesCount: 15 },
   { id: 2, message: "Cool, I'am the best", likesCount: 20 },
 ];
 
-let dialogsData = [
+let dialogs = [
   { id: 1, name: "Andrei" },
   { id: 2, name: "Dima" },
   { id: 3, name: "Artem" },
@@ -25,7 +26,7 @@ let messages = [
   { id: 5, message: "Yo" },
 ];
 
-ReactDOM.render(<App posts={posts} dialogsData={dialogsData} messages={messages} />, document.getElementById('root'));
+ReactDOM.render(<App posts={posts} dialogs={dialogs} messages={messages} />, document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
