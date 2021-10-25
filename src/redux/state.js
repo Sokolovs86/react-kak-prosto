@@ -20,3 +20,5 @@ messages: [
     { id: 5,   message: "Yo" },
 ], 
 }
+
+export default state;
