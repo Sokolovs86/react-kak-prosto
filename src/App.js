@@ -17,7 +17,6 @@ const App = (props) => {
     { id: 1, message: "Hi, how are you?", likesCount: 15 },
     { id: 2, message: "Cool, I'am the best", likesCount: 20 },
   ]; */
-  
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -31,9 +30,9 @@ const App = (props) => {
           <Route path="/settings" component={Settings} /> */}
 
           {/* <Route path="/dialogs" component={() => SomeComponent} /> */}
-          {/* <Route path="/dialogs" render={() => <Dialogs />} /> */}
+          {/* <Route path="/dialogs" render={() => <Dialogs />} /> */} 
+          {/* <Route exact path="/dialogs"><Dialogs /></Route> */}
           <Route path="/dialogs" render={() => <Dialogs dialogs={props.dialogs} messages={props.messages} />} />
-          <Route exact path="/dialogs"><Dialogs /></Route> 
           <Route path="/profile" render={() => <Profile posts={props.posts} />} />
           {/* <Route path="/dialogs" render={() => <News />} />
           <Route path="/dialogs" render={() => <Music />} />
