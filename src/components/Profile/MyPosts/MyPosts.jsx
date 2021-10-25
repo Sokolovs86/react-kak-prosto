@@ -25,8 +25,7 @@ const MyPosts = () => {
         </div>
       </div>
       <div className={ss.posts}>
-        <Post message={postsData[0].message} likesCount={postsData[0].likesCount} />
-        <Post message={postsData[1].message} likesCount={postsData[1].likesCount} />
+        {postsElements}
         {/* <Post likesCount="15" message={"Hi, how are you?"} />
         <Post likesCount={20} message={"Cool, I'am the best"} />
         <Post message={"Help me"} likesCount={10} />
