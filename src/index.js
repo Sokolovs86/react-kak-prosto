@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Dialogs from './components/Dialogs/Dialogs';
+// import Dialogs from './components/Dialogs/Dialogs';
 
 let posts = [
   { id: 1, message: "Hi, how are you?", likesCount: 15 },
