@@ -33,7 +33,7 @@ const App = (props) => {
           {/* <Route path="/dialogs" component={() => SomeComponent} /> */}
           {/* <Route path="/dialogs" render={() => <Dialogs />} /> */}
           <Route path="/dialogs" render={() => <Dialogs dialogs={props.dialogs} messages={props.messages} />} />
-          {/* <Route exact path="/dialogs"><Dialogs /></Route> */}
+          <Route exact path="/dialogs"><Dialogs /></Route> 
           <Route path="/profile" render={() => <Profile posts={props.posts} />} />
           {/* <Route path="/dialogs" render={() => <News />} />
           <Route path="/dialogs" render={() => <Music />} />
