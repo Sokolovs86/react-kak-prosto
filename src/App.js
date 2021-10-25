@@ -12,6 +12,12 @@ import Settings from "./components/Settings/Settings";
 // let SomeComponent = () => <Dialogs />
 
 const App = () => {
+  
+  let posts = [
+    { id: 1, message: "Hi, how are you?", likesCount: 15 },
+    { id: 2, message: "Cool, I'am the best", likesCount: 20 },
+  ];
+  
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -27,7 +33,7 @@ const App = () => {
           {/* <Route path="/dialogs" component={() => SomeComponent} /> */}
           {/* <Route path="/dialogs" render={() => <Dialogs />} /> */}
           <Route exact path="/dialogs"><Dialogs /></Route>
-          <Route path="/profile" render={() => <Profile />} />
+          <Route path="/profile" render={() => <Profile posts={posts} />} />
           {/* <Route path="/dialogs" render={() => <News />} />
           <Route path="/dialogs" render={() => <Music />} />
           <Route path="/dialogs" render={() => <Settings />} /> */}
