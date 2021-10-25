@@ -11,12 +11,12 @@ import Settings from "./components/Settings/Settings";
 
 // let SomeComponent = () => <Dialogs />
 
-const App = () => {
+const App = (props) => {
   
-  let posts = [
+  /* let posts = [
     { id: 1, message: "Hi, how are you?", likesCount: 15 },
     { id: 2, message: "Cool, I'am the best", likesCount: 20 },
-  ];
+  ]; */
   
   return (
     <BrowserRouter>
@@ -33,7 +33,7 @@ const App = () => {
           {/* <Route path="/dialogs" component={() => SomeComponent} /> */}
           {/* <Route path="/dialogs" render={() => <Dialogs />} /> */}
           <Route exact path="/dialogs"><Dialogs /></Route>
-          <Route path="/profile" render={() => <Profile posts={posts} />} />
+          <Route path="/profile" render={() => <Profile posts={props.posts} />} />
           {/* <Route path="/dialogs" render={() => <News />} />
           <Route path="/dialogs" render={() => <Music />} />
           <Route path="/dialogs" render={() => <Settings />} /> */}
