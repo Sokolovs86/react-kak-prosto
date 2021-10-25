@@ -12,7 +12,7 @@ const Profile = () => {
   return (
     <div>
       <ProfileInfo />
-      <MyPosts />
+      <MyPosts posts={posts} />
     </div>
   );
 };
