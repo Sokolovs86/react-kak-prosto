@@ -9,7 +9,7 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 
-let SomeComponent = () => <Dialogs />
+// let SomeComponent = () => <Dialogs />
 
 const App = () => {
   return (
@@ -24,8 +24,10 @@ const App = () => {
           <Route path="/music" component={Music} />
           <Route path="/settings" component={Settings} /> */}
 
-          <Route path="/dialogs" component={() => SomeComponent} />
-          <Route path="/dialogs" render={() => <Profile />} />
+          {/* <Route path="/dialogs" component={() => SomeComponent} /> */}
+          {/* <Route path="/dialogs" render={() => <Dialogs />} /> */}
+          <Route exact path="/dialogs"><Dialogs /></Route>
+          <Route path="/profile" render={() => <Profile />} />
           {/* <Route path="/dialogs" render={() => <News />} />
           <Route path="/dialogs" render={() => <Music />} />
           <Route path="/dialogs" render={() => <Settings />} /> */}
