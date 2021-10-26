@@ -8,11 +8,11 @@ import {addPost} from './redux/state';
 import { BrowserRouter } from 'react-router-dom';
 // import Dialogs from './components/Dialogs/Dialogs';
 
-addPost('Niger, Hi))');
+// addPost('Niger, Hi))');
 
 ReactDOM.render(
     <BrowserRouter>
-        <App state={state} />
+        <App state={state} addPost={addPost} />
     </BrowserRouter>, document.getElementById("root")
 );
 // If you want to start measuring performance in your app, pass a function
