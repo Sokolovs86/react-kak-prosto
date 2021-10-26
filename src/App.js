@@ -18,7 +18,6 @@ const App = (props) => {
     { id: 2, message: "Cool, I'am the best", likesCount: 20 },
   ]; */
   return (
-    <BrowserRouter>
       <div className="app-wrapper">
         <Header />
         <Navbar />
@@ -39,7 +38,6 @@ const App = (props) => {
           <Route path="/dialogs" render={() => <Settings />} /> */}
         </div>
       </div>
-    </BrowserRouter>
   );
 };
 
