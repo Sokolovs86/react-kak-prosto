@@ -13,15 +13,20 @@ let postsElements =
   props.posts.map((p) => (<Post message={p.message} likesCount={p.likesCount} />));
 
 let addPosts = () => {
-  alert("google.com");
-}
+  // alert("google.com");
+//   let text = document.getElementById('new-post').value;
+//   alert(text);
+// }
+let text = 
+  alert(text);
 
   return (
     <div className={ss.postsBlock}>
       <h3>My posts</h3>
       <div>
         <div>
-          <textarea></textarea>
+          {/* <textarea id='new-post'></textarea> */}
+          <textarea id='new-post'></textarea> 
         </div>
         <div>
           <button onClick= { addPosts } >Add post</button>
