@@ -15,6 +15,7 @@ let postsElements =
 let newPostElement = React.createRef();
 
 let addPosts = () => {
+  debugger;
   let text = newPostElement.current.value;
   props.addPost(text);
   // alert("google.com");

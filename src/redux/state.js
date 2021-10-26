@@ -31,6 +31,7 @@ let state = {
 };
 
 export let addPost = (postMessage) => {
+    debugger;
     let newPost = {
         id: 3,
         message: postMessage,
