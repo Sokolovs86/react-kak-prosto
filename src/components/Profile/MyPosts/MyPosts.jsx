@@ -9,8 +9,12 @@ const MyPosts = (props) => {
     { id: 2, message: "Cool, I'am the best", likesCount: 20 },
   ]; */
 
-  let postsElements = 
+let postsElements = 
   props.posts.map((p) => (<Post message={p.message} likesCount={p.likesCount} />));
+
+let addPosts = () => {
+  alert("google.com");
+}
 
   return (
     <div className={ss.postsBlock}>
