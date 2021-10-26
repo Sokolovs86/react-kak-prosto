@@ -24,7 +24,7 @@ let addPosts = () => {
           <textarea></textarea>
         </div>
         <div>
-          <button onClick={ () => {alert ('google.com')}}>Add post</button>
+          <button onClick= { addPosts } >Add post</button>
         </div>
       </div>
       <div className={ss.posts}>
