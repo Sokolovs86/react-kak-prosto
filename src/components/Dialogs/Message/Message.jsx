@@ -12,15 +12,13 @@ let addMessages = () => {
 
 return (
   <div>
-    <div className={ss.message}>{props.message}</div>
+    <textarea ref={newMessageElement}></textarea>
     <div>
-      <div>
-        {/* <textarea id='new-post'></textarea> */}
-        <textarea ref={newMessageElement}></textarea>
-      </div>
-      <div>
-        <button onClick={addMessages}>Add message</button>
-      </div>
+      <button onClick={addMessages}>Add message</button>
+    </div>
+    <div>
+      <div className={ss.message}>{props.message}</div>
+      <div></div>
     </div>
   </div>
 );
