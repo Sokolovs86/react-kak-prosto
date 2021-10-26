@@ -12,13 +12,15 @@ const MyPosts = (props) => {
 let postsElements = 
   props.posts.map((p) => (<Post message={p.message} likesCount={p.likesCount} />));
 
+let newPostElement = React.createRef();
+
 let addPosts = () => {
+  let text = newPostElement.current.value;
+  alert(text);
   // alert("google.com");
 //   let text = document.getElementById('new-post').value;
 //   alert(text);
-// }
-let text = 
-  alert(text);
+}
 
   return (
     <div className={ss.postsBlock}>
@@ -26,10 +28,10 @@ let text =
       <div>
         <div>
           {/* <textarea id='new-post'></textarea> */}
-          <textarea id='new-post'></textarea> 
+          <textarea ref={newPostElement}></textarea>
         </div>
         <div>
-          <button onClick= { addPosts } >Add post</button>
+          <button onClick={addPosts}>Add post</button>
         </div>
       </div>
       <div className={ss.posts}>
