@@ -14,10 +14,9 @@ let postsElements =
 
 let newPostElement = React.createRef();
 
-let addPosts = () => {
+let addPost = () => {
   //let text = newPostElement.current.value;
-  props.addPosts();
-  props.updateNewPostText('');
+  props.addPost();
   // newPostElement.current.value = ''; // занулить значение value 
   // alert("google.com");
 //   let text = document.getElementById('new-post').value;
@@ -39,7 +38,7 @@ let onPostChange = () => {
           <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText} />
         </div>
         <div>
-          <button onClick={addPosts}>Add post</button>
+          <button onClick={addPost}>Add post</button>
         </div>
       </div>
       <div className={ss.posts}>
