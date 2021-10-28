@@ -17,6 +17,7 @@ let newPostElement = React.createRef();
 let addPosts = () => {
   let text = newPostElement.current.value;
   props.addPost(text);
+  props.updateNewPostText('');
   // newPostElement.current.value = ''; // занулить значение value 
   // alert("google.com");
 //   let text = document.getElementById('new-post').value;
