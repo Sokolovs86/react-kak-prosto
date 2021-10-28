@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { addPost } from "./redux/state";
 import { BrowserRouter } from "react-router-dom";
 
-export let rerenderEntireTree = () => {
+export let rerenderEntireTree = (state) => {
   ReactDOM.render(
     <BrowserRouter>
       <App state={state} addPost={addPost} />
