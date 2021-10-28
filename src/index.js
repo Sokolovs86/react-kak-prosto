@@ -9,14 +9,14 @@ import { BrowserRouter } from 'react-router-dom';
 // import Dialogs from './components/Dialogs/Dialogs';
 
 // addPost('Niger, Hi))');
-let renderEntireTree = () => {
-    
-}
-ReactDOM.render(
-    <BrowserRouter>
+let rerenderEntireTree = () => {
+    ReactDOM.render(
+        <BrowserRouter>
         <App state={state} addPost={addPost} />
-    </BrowserRouter>, document.getElementById("root")
-);
+        </BrowserRouter>, document.getElementById("root")
+    );
+}
+rerenderEntireTree();
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
