@@ -30,7 +30,7 @@ let addPosts = () => {
       <div>
         <div>
           {/* <textarea id='new-post'></textarea> */}
-          <textarea ref={newPostElement}></textarea>
+          <textarea ref={newPostElement} value="it-kabzda" />
         </div>
         <div>
           <button onClick={addPosts}>Add post</button>
