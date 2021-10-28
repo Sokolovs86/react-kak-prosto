@@ -24,13 +24,17 @@ let addPosts = () => {
 //   alert(text);
 }
 
+let onPostChange = () => {
+
+}
+
   return (
     <div className={ss.postsBlock}>
       <h3>My posts</h3>
       <div>
         <div>
           {/* <textarea id='new-post'></textarea> */}
-          <textarea ref={newPostElement} value="it-kabzda" />
+          <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText} />
         </div>
         <div>
           <button onClick={addPosts}>Add post</button>
