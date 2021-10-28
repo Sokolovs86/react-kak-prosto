@@ -26,7 +26,8 @@ let addPosts = () => {
 
 let onPostChange = () => {
   let text = newPostElement.current.value;
-  console.log (text);
+  props.updateNewPostText (text);
+  //console.log (text);
 }
 
   return (

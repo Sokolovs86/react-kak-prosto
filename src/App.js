@@ -42,7 +42,7 @@ const App = (props) => {
             <Profile
               profilePage={props.state.profilePage}
               addPost={props.addPost}
-              updateNewPostText={updateNewPostText} />
+              updateNewPostText={props.updateNewPostText} />
           )}
         />
         {/* <Route path="/dialogs" render={() => <News />} />
