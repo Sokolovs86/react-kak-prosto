@@ -25,7 +25,7 @@ let addPosts = () => {
 }
 
 let onPostChange = () => {
-
+  console.log ();
 }
 
   return (
