@@ -9,7 +9,9 @@ import { BrowserRouter } from 'react-router-dom';
 // import Dialogs from './components/Dialogs/Dialogs';
 
 // addPost('Niger, Hi))');
-
+let renderEntireTree = () => {
+    
+}
 ReactDOM.render(
     <BrowserRouter>
         <App state={state} addPost={addPost} />
