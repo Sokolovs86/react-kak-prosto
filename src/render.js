@@ -10,7 +10,7 @@ export let rerenderEntireTree = (state) => {
   ReactDOM.render(
     <BrowserRouter>
       <App state={state} addPost={ addPost} /> 
-      {/* addPost={ (message) => { alert("IIIIUUUUUU")}} /> тупая компонента */}
+      {/* addPost={ (message) => { alert("IIIIUUUUUU" + message)}} /> тупая компонента */}
     </BrowserRouter>,
     document.getElementById("root")
   );
