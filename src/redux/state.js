@@ -31,6 +31,8 @@ let state = {
   },
 };
 
+window.state = state;
+
 export let addPost = (postMessage) => {
     let newPost = {
         id: 3,
