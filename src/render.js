@@ -9,7 +9,8 @@ import { BrowserRouter } from "react-router-dom";
 export let rerenderEntireTree = (state) => {
   ReactDOM.render(
     <BrowserRouter>
-      <App state={state} addPost={addPost} />
+      <App state={state} addPost={ addPost} /> 
+      {/* addPost={ (message) => { alert("IIIIUUUUUU")}} /> тупая компонента */}
     </BrowserRouter>,
     document.getElementById("root")
   );

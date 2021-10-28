@@ -18,7 +18,7 @@ let addPosts = () => {
   // debugger;
   let text = newPostElement.current.value;
   props.addPost(text);
-  newPostElement.current.value = '';
+  newPostElement.current.value = ''; // занулить функцию
   // alert("google.com");
 //   let text = document.getElementById('new-post').value;
 //   alert(text);
