@@ -51,7 +51,7 @@ export const updateNewPostText = (newText) => {
         rerenderEntireTree();
     }
 export const subscribe = (observer) => {
-    rerenderEntireTree = observer;
+    rerenderEntireTree = observer; // паттерн observer addEventListener похож на publisher-subscriber
 }
     
 export default state;
