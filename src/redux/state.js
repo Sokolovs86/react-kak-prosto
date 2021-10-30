@@ -1,3 +1,7 @@
+let rerenderEntireTree =() => {
+    console.log ('state is changed');
+}
+
 let state = {
   profilePage: {
     posts: [
