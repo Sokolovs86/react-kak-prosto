@@ -1,5 +1,5 @@
 let rerenderEntireTree =() => {
-    console.log ('state is changed');
+    console.log ('state changed');
 }
 
 let state = {
@@ -8,7 +8,7 @@ let state = {
       { id: 1, message: "Hi, how are you?", likesCount: 15 },
       { id: 2, message: "Cool, I'am the best", likesCount: 20 },
     ],
-    newPostText: ('') //"it-kabzda"
+    newPostText: "it-kabzda", //"it-kabzda"
   },
 
   dialogsPage: {
