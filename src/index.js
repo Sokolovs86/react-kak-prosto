@@ -14,6 +14,7 @@ let rerenderEntireTree = () => {
         state={state}
         addPost={addPost}
         updateNewPostText={updateNewPostText}
+
       />
       {/* addPost={ (message) => { alert("IIIIUUUUUU" + message)}} /> тупая компонента */}
     </BrowserRouter>,

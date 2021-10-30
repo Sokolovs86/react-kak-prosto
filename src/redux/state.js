@@ -35,7 +35,7 @@ let state = {
 
 window.state = state;
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: 3,
         message: state.profilePage.newPostText,
@@ -46,9 +46,12 @@ export let addPost = () => {
     state.profilePage.newPostText = '';
     rerenderEntireTree(state);
 }
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
         rerenderEntireTree(state);
     };
+export const subscribe = (observer) => {
+
+}
     
 export default state;
