@@ -7,7 +7,7 @@ import state from './redux/state';
 import { addPost, addPosts, updateNewPostText } from "./redux/state";
 import { BrowserRouter } from "react-router-dom";
 
-export let rerenderEntireTree = (state) => {
+let rerenderEntireTree = (state) => {
   ReactDOM.render(
     <BrowserRouter>
       <App

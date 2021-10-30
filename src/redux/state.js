@@ -1,5 +1,3 @@
-import { rerenderEntireTree } from "../render";
-
 let state = {
   profilePage: {
     posts: [
