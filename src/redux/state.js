@@ -44,11 +44,11 @@ export const addPost = () => {
 
     state.profilePage.posts.push(newPost);
     state.profilePage.newPostText = '';
-    rerenderEntireTree(state);
+    rerenderEntireTree();
 }
 export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
-        rerenderEntireTree(state);
+        rerenderEntireTree();
     }
 export const subscribe = (observer) => {
     rerenderEntireTree = observer;
