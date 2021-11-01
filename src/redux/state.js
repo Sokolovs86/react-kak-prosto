@@ -39,20 +39,38 @@ let store = {
     this._callSubscriber = observer; // паттерн observer addEventListener похож на publisher-subscriber
   },
 
+  _addPost() {
+    let newPost = {
+      id: 3,
+      message: this._state.profilePage.newPostText,
+      likesCount: 25,
+    };
+
+    this._state.profilePage.posts.push(newPost);
+    this._state.profilePage.newPostText = "";
+    this._callSubscriber(this._state);
+  },
+  _updateNewPostText(newText) {
+    this._state.profilePage.newPostText = newText;
+    this._callSubscriber(this._state);
+  },
+
   dispatch (action) { // { type: 'ADD-POST' }
 if (action.type === "ADD-POST") {
-  let newPost = {
-    id: 3,
-    message: this._state.profilePage.newPostText,
-    likesCount: 25,
-  };
+    this._addPost ();
+//   let newPost = {
+//     id: 3,
+//     message: this._state.profilePage.newPostText,
+//     likesCount: 25,
+//   };
 
-  this._state.profilePage.posts.push(newPost);
-  this._state.profilePage.newPostText = "";
-  this._callSubscriber(this._state);
+//   this._state.profilePage.posts.push(newPost);
+//   this._state.profilePage.newPostText = "";
+//   this._callSubscriber(this._state);
 } else if (action.type === "UPDATE-NEW-POST-TEXT") {
-  this._state.profilePage.newPostText = action.newText;
-  this._callSubscriber(this._state);
+    this._updateNewPostText (action.newText);
+//   this._state.profilePage.newPostText = action.newText;
+//   this._callSubscriber(this._state);
 }
   }
 };
