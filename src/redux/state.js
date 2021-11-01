@@ -29,32 +29,14 @@ let store = {
       sidebarPage: [{}],
     },
   },
-  getState() {
-    return this._state;
-  },
   _callSubscriber() {
     console.log("state changed");
   },
+  getState() {
+    return this._state;
+  },
   subscribe(observer) {
     this._callSubscriber = observer; // паттерн observer addEventListener похож на publisher-subscriber
-  },
-
-  // _addPost() {
-  addPost() {
-    let newPost = {
-      id: 3,
-      message: this._state.profilePage.newPostText,
-      likesCount: 25,
-    };
-
-    this._state.profilePage.posts.push(newPost);
-    this._state.profilePage.newPostText = "";
-    this._callSubscriber(this._state);
-  },
-  // _updateNewPostText(newText) {
-    updateNewPostText(newText) {
-    this._state.profilePage.newPostText = newText;
-    this._callSubscriber(this._state);
   },
 
   dispatch(action) {
@@ -79,4 +61,4 @@ let store = {
 };
 
 export default store;
-window.state = store;
+window.store = store;
