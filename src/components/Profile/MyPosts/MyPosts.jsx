@@ -17,7 +17,7 @@ let newPostElement = React.createRef();
 let addPost = () => {
   //let text = newPostElement.current.value;
   //props.addPost();
-  props.dispatch( { type: '' } );
+  props.dispatch({ type: "ADD-POST" });
   // newPostElement.current.value = ''; // занулить значение value 
   // alert("google.com");
 //   let text = document.getElementById('new-post').value;
@@ -27,10 +27,11 @@ let addPost = () => {
 let onPostChange = () => {
   let text = newPostElement.current.value;
   //props.updateNewPostText (text);
-  props.dispatch( { type: '' } );
+  let action = ({ type: "UPDATE-NEW-POST-TEXT", newText: text });
+  props.dispatch(action);
   //console.log (text);
 }
-
+ 
   return (
     <div className={ss.postsBlock}>
       <h3>My posts</h3>
