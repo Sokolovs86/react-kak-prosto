@@ -16,7 +16,8 @@ let newPostElement = React.createRef();
 
 let addPost = () => {
   //let text = newPostElement.current.value;
-  props.addPost();
+  //props.addPost();
+  props.dispatch();
   // newPostElement.current.value = ''; // занулить значение value 
   // alert("google.com");
 //   let text = document.getElementById('new-post').value;
@@ -25,7 +26,8 @@ let addPost = () => {
 
 let onPostChange = () => {
   let text = newPostElement.current.value;
-  props.updateNewPostText (text);
+  //props.updateNewPostText (text);
+  props.dispatch();
   //console.log (text);
 }
 
@@ -38,7 +40,7 @@ let onPostChange = () => {
           <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText} />
         </div>
         <div>
-          <button onClick={addPost }>Add post</button>
+          <button onClick={addPost}>Add post</button>
         </div>
       </div>
       <div className={ss.posts}>
