@@ -32,7 +32,7 @@ let store = {
     getState() {
         return this._state;
     },
-    rerenderEntireTree ()  {
+    _callSubscriber ()  {
     console.log ('state changed');
 },
     addPost ()  {
@@ -44,14 +44,14 @@ let store = {
 
     this._state.profilePage.posts.push(newPost);
     this._state.profilePage.newPostText = '';
-    this._rerenderEntireTree(this._state);
+    this._callSubscriber(this._state);
 },
     updateNewPostText (newText)  {
     this._state.profilePage.newPostText = newText;
-    this._rerenderEntireTree(this._state);
+    this._callSubscriber(this._state);
     },
     subscribe (observer)  {
-    this._rerenderEntireTree = observer; // паттерн observer addEventListener похож на publisher-subscriber
+    this._callSubscriber = observer; // паттерн observer addEventListener похож на publisher-subscriber
 },
 
 }
