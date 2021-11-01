@@ -12,8 +12,7 @@ let rerenderEntireTree = (state) => {
       <App
         state={state}
         dispatch={store.dispatch.bind(store)}
-        updateNewPostText={store.updateNewPostText.bind(store)}
-
+        
       />
       {/* addPost={ (message) => { alert("IIIIUUUUUU" + message)}} /> тупая компонента */}
     </BrowserRouter>,
