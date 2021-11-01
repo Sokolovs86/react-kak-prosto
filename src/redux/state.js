@@ -30,12 +30,14 @@ let store = {
   },
 },
     getState() {
+        debugger;
         return this._state;
     },
     _callSubscriber ()  {
     console.log ('state changed');
 },
     addPost ()  {
+        debugger;
     let newPost = {
         id: 3,
         message: this._state.profilePage.newPostText,

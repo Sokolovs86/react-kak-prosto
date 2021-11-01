@@ -10,9 +10,9 @@ let rerenderEntireTree = (state) => {
   ReactDOM.render(
     <BrowserRouter>
       <App
-        state={store.getState() }
-        addPost={store.addPost}
-        updateNewPostText={store.updateNewPostText}
+        state={state}
+        addPost={store.addPost.bind(store)}
+        updateNewPostText={store.updateNewPostText.bind(store)}
 
       />
       {/* addPost={ (message) => { alert("IIIIUUUUUU" + message)}} /> тупая компонента */}
