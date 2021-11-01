@@ -1,5 +1,5 @@
 let store = {
-        _state: {
+    _state: {
   profilePage: {
     posts: [
       { id: 1, message: "Hi, how are you?", likesCount: 15 },
@@ -29,17 +29,10 @@ let store = {
     sidebarPage: [{}],
   },
 },
-    rerenderEntireTree() {
+    rerenderEntireTree ()  {
     console.log ('state changed');
 },
-
-
-}
-
-
-window.state = state;
-
-export const addPost = () => {
+    addPost ()  {
     let newPost = {
         id: 3,
         message: state.profilePage.newPostText,
@@ -49,13 +42,15 @@ export const addPost = () => {
     state.profilePage.posts.push(newPost);
     state.profilePage.newPostText = '';
     rerenderEntireTree(state);
-}
-export const updateNewPostText = (newText) => {
+},
+    updateNewPostText (newText)  {
     state.profilePage.newPostText = newText;
         rerenderEntireTree(state);
-    }
-export const subscribe = (observer) => {
+    },
+     subscribe (observer)  {
     rerenderEntireTree = observer; // паттерн observer addEventListener похож на publisher-subscriber
 }
-    
+
+}
+window.state = state;
 export default state;
