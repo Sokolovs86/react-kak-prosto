@@ -3,17 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import state, { subscribe } from './redux/state';
-import { addPost, addPosts, updateNewPostText } from "./redux/state";
+import store from './redux/state';
 import { BrowserRouter } from "react-router-dom";
 
 let rerenderEntireTree = (state) => {
   ReactDOM.render(
     <BrowserRouter>
       <App
-        state={state}
-        addPost={addPost}
-        updateNewPostText={updateNewPostText}
+        state={store.getState() }
+        addPost={store.addPost}
+        updateNewPostText={store.updateNewPostText}
 
       />
       {/* addPost={ (message) => { alert("IIIIUUUUUU" + message)}} /> тупая компонента */}
@@ -26,7 +25,7 @@ let rerenderEntireTree = (state) => {
 
 // addPost('Niger, Hi))');
 
-rerenderEntireTree(state);
-subscribe(rerenderEntireTree);
+rerenderEntireTree(store.getState() );
+store.subscribe(rerenderEntireTree);
 
 reportWebVitals();

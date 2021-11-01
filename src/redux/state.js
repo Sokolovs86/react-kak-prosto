@@ -29,28 +29,32 @@ let store = {
     sidebarPage: [{}],
   },
 },
+    getState() {
+        return this._state;
+    },
     rerenderEntireTree ()  {
     console.log ('state changed');
 },
     addPost ()  {
     let newPost = {
         id: 3,
-        message: state.profilePage.newPostText,
+        message: this._state.profilePage.newPostText,
         likesCount: 25,
     };
 
-    state.profilePage.posts.push(newPost);
-    state.profilePage.newPostText = '';
-    rerenderEntireTree(state);
+    this._state.profilePage.posts.push(newPost);
+    this._state.profilePage.newPostText = '';
+    this._rerenderEntireTree(this._state);
 },
     updateNewPostText (newText)  {
-    state.profilePage.newPostText = newText;
-        rerenderEntireTree(state);
+    this._state.profilePage.newPostText = newText;
+    this._rerenderEntireTree(this._state);
     },
-     subscribe (observer)  {
-    rerenderEntireTree = observer; // паттерн observer addEventListener похож на publisher-subscriber
-}
+    subscribe (observer)  {
+    this._rerenderEntireTree = observer; // паттерн observer addEventListener похож на publisher-subscriber
+},
 
 }
-window.state = state;
-export default state;
+
+export default store;
+window.state = store;
