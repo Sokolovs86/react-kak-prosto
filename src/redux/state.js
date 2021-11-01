@@ -39,22 +39,6 @@ let store = {
     this._callSubscriber = observer; // паттерн observer addEventListener похож на publisher-subscriber
   },
 
-  addPost() {
-    let newPost = {
-      id: 3,
-      message: this._state.profilePage.newPostText,
-      likesCount: 25,
-    };
-
-    this._state.profilePage.posts.push(newPost);
-    this._state.profilePage.newPostText = "";
-    this._callSubscriber(this._state);
-  },
-  updateNewPostText(newText) {
-    this._state.profilePage.newPostText = newText;
-    this._callSubscriber(this._state);
-  },
-
   dispatch (action) { // { type: 'ADD-POST' }
 if (action.type === "ADD-POST") {
   let newPost = {
