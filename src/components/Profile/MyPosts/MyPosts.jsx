@@ -4,9 +4,16 @@ import Post from "./Post/Post";
 
 let addPostActionCreator = () => {
   return {
-    type: 'ADD-Post',
+    type: 'ADD-POST',
   }
 }
+
+let updateNewPostTextActionCreator = (text) => {
+  return {
+    type: "UPDATE-NEW-POST-TEXT",
+    newText: text,
+  };
+};
 
 const MyPosts = (props) => {
 
@@ -33,8 +40,9 @@ let addPost = () => {
 let onPostChange = () => {
   let text = newPostElement.current.value;
   //props.updateNewPostText (text);
-  let action = ({ type: "UPDATE-NEW-POST-TEXT", newText: text });
-  props.dispatch(action);
+  //let action = ({ type: "UPDATE-NEW-POST-TEXT", newText: text });
+  let action = (updateNewPostTextActionCreator(text) );
+  props.dispatch (action);
   //console.log (text);
 }
  
