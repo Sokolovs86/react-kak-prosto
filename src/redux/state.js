@@ -1,5 +1,6 @@
 const ADD_POST = 'ADD-POST';
-let UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
 
 let store = {
   _state: {
@@ -19,6 +20,7 @@ let store = {
         { id: 4, message: "Hello pa" },
         { id: 5, message: "Yo" },
       ],
+    newMessageBody: "",
 
       dialogs: [
         { id: 1, name: "Andrei" },
