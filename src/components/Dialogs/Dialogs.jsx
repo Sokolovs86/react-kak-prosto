@@ -1,5 +1,5 @@
 import React from "react";
-import { updateNewMessageBodyCreator } from "../../redux/state";
+import { sendMessageCreator, updateNewMessageBodyCreator } from "../../redux/state";
 import DialogItem from "./DialogItem/DialogItem";
 import ss from "./Dialogs.module.css";
 import Message from "./Message/Message";
@@ -11,7 +11,7 @@ let messagesElements = props.state.messages.map((m) => (<Message message={m.mess
 let newMessageBody = props.state.newMessageBody;
 
 let onSendMessageClick = () => {
-  
+  props.store.dispatch(sendMessageCreator());
 }
  
 let onNewMessageChange = (e) => {  // e = event
