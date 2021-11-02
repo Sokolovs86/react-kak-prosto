@@ -8,12 +8,12 @@ const Dialogs = (props) => {
 let dialogsElements = props.state.dialogs.map( d => <DialogItem name={d.name} id={d.id} /> );
 let messagesElements = props.state.messages.map((m) => (<Message message={m.message} />));
 
-let newMessageElement = React.createRef();
+// let newMessageElement = React.createRef();
 
-let addMessages = () => {
-let text = newMessageElement.current.value;
-alert(text);
-}
+// let addMessages = () => {
+// let text = newMessageElement.current.value;
+// alert(text);
+// }
 
     // let d= {
     //   id: 2,
@@ -22,7 +22,7 @@ alert(text);
 
   return (
     <div className={ss.dialogs}>
-      <h3>My messages</h3>
+      {/* <h3>My messages</h3>
       <div>
         <div>
           <textarea ref={newMessageElement}></textarea>
@@ -30,10 +30,16 @@ alert(text);
         <div>
           <button onClick={addMessages}>Add message</button>
         </div>
-      </div>
+      </div> */}
 
       <div className={ss.dialogsItems}>{dialogsElements}</div>
-      <div className={ss.messages}>{messagesElements}</div>
+      <div className={ss.messages}>
+        <div>{messagesElements}</div>
+        <div>
+          <div><textarea placeholder='Enter your message'></textarea></div>
+          <div><button onClick={ () => {alert('dddddd')}}>Send</button></div>
+        </div>
+      </div>
     </div>
   );
 };
