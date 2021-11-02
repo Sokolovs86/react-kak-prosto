@@ -87,8 +87,12 @@ export const addPostActionCreator = () => ({type: ADD_POST});
 //     newText: text,
 //   };
 // };
-export const updateNewPostTextActionCreator = (text) => ({
-  type: UPDATE_NEW_POST_TEXT, newText: text
-});
+export const updateNewPostTextActionCreator = (text) => 
+({type: UPDATE_NEW_POST_TEXT, newText: text});
+
+export const sendMessageCreator = () => ({ type: SEND_MESSAGE });
+export const updateNewMessageBodyCreator = (text) => 
+({ type: UPDATE_NEW_MESSAGE_BODY, body: text,});
+
 export default store;
 window.store = store;
