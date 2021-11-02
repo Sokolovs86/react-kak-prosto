@@ -45,7 +45,9 @@ let onNewMessageChange = (e) => {  // e = event
         </div>
       </div> */}
 
-      <div className={ss.dialogsItems}>{dialogsElements}</div>
+      <div className={ss.dialogsItems}>
+      {dialogsElements}
+      </div>
       <div className={ss.messages}>
         <div>{messagesElements}</div>
         <div>
