@@ -2,6 +2,12 @@ import React from "react";
 import ss from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
+let addPostActionCreator = () => {
+  return {
+    type: 'ADD-Post',
+  }
+}
+
 const MyPosts = (props) => {
 
  /*  let posts = [
@@ -17,7 +23,7 @@ let newPostElement = React.createRef();
 let addPost = () => {
   //let text = newPostElement.current.value;
   //props.addPost();
-  props.dispatch({ type: "ADD-POST" });
+  props.dispatch(addPostActionCreator() );
   // newPostElement.current.value = ''; // занулить значение value 
   // alert("google.com");
 //   let text = document.getElementById('new-post').value;
