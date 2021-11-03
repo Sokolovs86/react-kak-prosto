@@ -55,31 +55,7 @@ let store = {
     this._state.sidebar = sidebarReducer(this._state.sidebar, action);
 
     this._callSubscriber(this._state);
-    // { type: 'ADD-POST' }
-    if (action.type === ADD_POST) {
-      // this._addPost ();
-      let newPost = {
-        id: 3,
-        message: this._state.profilePage.newPostText,
-        likesCount: 25,
-      };
 
-      this._state.profilePage.posts.push(newPost);
-      this._state.profilePage.newPostText = "";
-      this._callSubscriber(this._state);
-    } else if (action.type === UPDATE_NEW_POST_TEXT) {
-      // this._updateNewPostText (action.newText);
-      this._state.profilePage.newPostText = action.newText;
-      this._callSubscriber(this._state);
-    } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
-      this._state.dialogsPage.newMessageBody = action.body;
-      this._callSubscriber(this._state);
-    } else if (action.type === SEND_MESSAGE) {
-      let body = this._state.dialogsPage.newMessageBody;
-      this._state.dialogsPage.newMessageBody = '';
-      this._state.dialogsPage.messages.push({id: 6, message: body});
-      this._callSubscriber(this._state);
-    }
   },
 };
 
