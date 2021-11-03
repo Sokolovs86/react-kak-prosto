@@ -1,5 +1,5 @@
 import React from "react";
-import { updateNewPostText } from "../../redux/state";
+import { updateNewPostText } from "../../redux/store";
 import MyPosts from "./MyPosts/MyPosts";
 import ss from "./Profile.module.css";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
