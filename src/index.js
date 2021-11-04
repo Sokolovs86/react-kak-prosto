@@ -7,6 +7,7 @@ import store from './redux/redux-store';
 import { BrowserRouter } from "react-router-dom";
 
 let rerenderEntireTree = (state) => {
+  debugger;
   ReactDOM.render(
     <BrowserRouter>
       <App
@@ -25,6 +26,10 @@ let rerenderEntireTree = (state) => {
 // addPost('Niger, Hi))');
 
 rerenderEntireTree(store.getState() );
-store.subscribe(rerenderEntireTree);
+
+store.subscribe(() => {
+  let state = store.getState();
+  rerenderEntireTree(state);
+});
 
 reportWebVitals();
