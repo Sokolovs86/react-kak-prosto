@@ -13,7 +13,7 @@ import Settings from "./components/Settings/Settings";
 // let SomeComponent = () => <Dialogs />
 
 const App = (props) => {
-  debugger;
+  
   /* let posts = [
     { id: 1, message: "Hi, how are you?", likesCount: 15 },
     { id: 2, message: "Cool, I'am the best", likesCount: 20 },
