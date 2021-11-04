@@ -27,7 +27,7 @@ let store = {
         { id: 4, message: "Hello pa" },
         { id: 5, message: "Yo" },
       ],
-      newMessageBody: ""
+      newMessageBody: "",
     },
     sidebar: {
       //sidebarPage: [{}],
@@ -44,7 +44,6 @@ let store = {
   },
 
   dispatch(action) {
-
     this._state.profilePage = profileReducer(this._state.profilePage, action);
     this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
     this._state.sidebar = sidebarReducer(this._state.sidebar, action);
@@ -58,7 +57,6 @@ let store = {
 //     type: ADD_POST,
 //   };
 // };
-
 
 // export const updateNewPostTextActionCreator = (text) => {
 //   return {

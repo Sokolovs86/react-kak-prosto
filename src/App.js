@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
 import { BrowserRouter, Route } from "react-router-dom";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
@@ -13,7 +14,6 @@ import Settings from "./components/Settings/Settings";
 // let SomeComponent = () => <Dialogs />
 
 const App = (props) => {
-  
   /* let posts = [
     { id: 1, message: "Hi, how are you?", likesCount: 15 },
     { id: 2, message: "Cool, I'am the best", likesCount: 20 },
@@ -28,22 +28,21 @@ const App = (props) => {
           <Route path="/news" component={News} />
           <Route path="/music" component={Music} />
           <Route path="/settings" component={Settings} /> */}
-
         {/* <Route path="/dialogs" component={() => SomeComponent} /> */}
         {/* <Route path="/dialogs" render={() => <Dialogs />} /> */}
         {/* <Route exact path="/dialogs"><Dialogs /></Route> */}
         <Route
           path="/dialogs"
-          render={() => <Dialogs store={props.store} />}
+          //render={() => <Dialogs store={props.store} />} />
+          render={() => <DialogsContainer store={props.store} />}
         />
         <Route
           path="/profile"
-          render={() => (
-            <Profile
-              profilePage={props.state.profilePage}
-              dispatch={props.dispatch}
-            />
-          )}
+          // render={() => (
+          //   <Profile
+          //     profilePage={props.state.profilePage}
+          //     dispatch={props.dispatch}
+          render={() => <Profile store={props.store} />}
         />
         {/* <Route path="/dialogs" render={() => <News />} />
           <Route path="/dialogs" render={() => <Music />} />

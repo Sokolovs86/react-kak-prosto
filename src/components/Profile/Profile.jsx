@@ -1,12 +1,14 @@
 import React from "react";
-import MyPostsContainer from "./MyPosts/Post/MyPostsContainer";
+import { updateNewPostText } from "../../redux/store";
+import MyPosts from "./MyPosts/MyPosts";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
   return (
     <div>
       <ProfileInfo />
-      <MyPostsContainer store={props.store} />
+      <MyPostsContainer store={props.store} /> 
     </div>
   );
 };

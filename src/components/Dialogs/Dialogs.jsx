@@ -1,37 +1,47 @@
 import React from "react";
-import { sendMessageCreator, updateNewMessageBodyCreator } from "../../redux/dialogs-reducer";
+import {
+  sendMessageCreator,
+  updateNewMessageBodyCreator,
+} from "../../redux/dialogs-reducer";
 import DialogItem from "./DialogItem/DialogItem";
 import ss from "./Dialogs.module.css";
 import Message from "./Message/Message";
 
 const Dialogs = (props) => {
+  //let state = props.store.getState().dialogsPage;
+  let state = props.dialogsPage;
 
-let state = props.store.getState().dialogsPage;
+  let dialogsElements = state.dialogs.map((d) => (
+    <DialogItem name={d.name} id={d.id} />
+  ));
+  let messagesElements = state.messages.map((m) => (
+    <Message message={m.message} />
+  ));
+  let newMessageBody = state.newMessageBody;
 
-let dialogsElements = state.dialogs.map( d => <DialogItem name={d.name} id={d.id} /> );
-let messagesElements = state.messages.map((m) => (<Message message={m.message} />));
-let newMessageBody = state.newMessageBody;
+  let onSendMessageClick = () => {
+    //props.store.dispatch(sendMessageCreator());
+    props.sendMessage();
+  };
 
-let onSendMessageClick = () => {
-  props.store.dispatch(sendMessageCreator());
-}
- 
-let onNewMessageChange = (e) => {  // e = event
-  let body = e.target.value;
-  props.store.dispatch(updateNewMessageBodyCreator(body));
-};
+  let onNewMessageChange = (e) => {
+    // e = event
+    let body = e.target.value;
+    //props.store.dispatch(updateNewMessageBodyCreator(body));
+    props.updateNewMessageBody(body);
+  };
 
-// let newMessageElement = React.createRef();
+  // let newMessageElement = React.createRef();
 
-// let addMessages = () => {
-// let text = newMessageElement.current.value;
-// alert(text);
-// }
+  // let addMessages = () => {
+  // let text = newMessageElement.current.value;
+  // alert(text);
+  // }
 
-    // let d= {
-    //   id: 2,
-    //   name: 'Dimas',
-    // };
+  // let d= {
+  //   id: 2,
+  //   name: 'Dimas',
+  // };
 
   return (
     <div className={ss.dialogs}>
@@ -45,9 +55,7 @@ let onNewMessageChange = (e) => {  // e = event
         </div>
       </div> */}
 
-      <div className={ss.dialogsItems}>
-      {dialogsElements}
-      </div>
+      <div className={ss.dialogsItems}>{dialogsElements}</div>
       <div className={ss.messages}>
         <div>{messagesElements}</div>
         <div>
@@ -55,7 +63,8 @@ let onNewMessageChange = (e) => {  // e = event
             <textarea
               value={newMessageBody}
               onChange={onNewMessageChange}
-              placeholder="Enter your message"></textarea>
+              placeholder="Enter your message"
+            ></textarea>
           </div>
           <div>
             <button onClick={onSendMessageClick}>Send</button>
