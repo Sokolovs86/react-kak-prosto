@@ -19,7 +19,7 @@ import Post from "./Post/Post";
 
 
 
-const MyPosts = (props) => {
+const MyPostsContainer = (props) => {
 
  /*  let posts = [
     { id: 1, message: "Hi, how are you?", likesCount: 15 },
@@ -43,35 +43,15 @@ let addPost = () => {
 
 let onPostChange = () => {
   let text = newPostElement.current.value;
-  props.updateNewPostText (text);
+  //props.updateNewPostText (text);
   //let action = ({ type: "UPDATE-NEW-POST-TEXT", newText: text });
-  //let action = updateNewPostTextActionCreator(text);
-  //props.dispatch (action);
+  let action = updateNewPostTextActionCreator(text);
+  props.dispatch (action);
   //console.log (text);
 }
  
-  return (
-    <div className={ss.postsBlock}>
-      <h3>My posts</h3>
-      <div>
-        <div>
-          {/* <textarea id='new-post'></textarea> */}
-          <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText} />
-        </div>
-        <div>
-          <button onClick={addPost}>Add post</button>
-        </div>
-      </div>
-      <div className={ss.posts}>
-        {postsElements}
-        {/* <Post likesCount="15" message={"Hi, how are you?"} />
-        <Post likesCount={20} message={"Cool, I'am the best"} />
-        <Post message={"Help me"} likesCount={10} />
-        <Post message="Yo" likesCount="15" />
-        <Post likesCount={20} /> */}
-      </div>
-    </div>
-  );
+  return (<MyPosts updateNewPostText = {() => {let action = updateNewPostTextActionCreator(text);
+  props.dispatch(action);}} />);
 };
 
-export default MyPosts;
+export default MyPostsContainer;
