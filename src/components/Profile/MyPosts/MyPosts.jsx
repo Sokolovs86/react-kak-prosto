@@ -31,8 +31,8 @@ let newPostElement = React.createRef();
 
 let addPost = () => {
   //let text = newPostElement.current.value;
-  //props.addPost();
-  props.dispatch(addPostActionCreator() );
+  props.addPost();
+  //props.dispatch(addPostActionCreator() );
   // newPostElement.current.value = ''; // занулить значение value 
   // alert("google.com");
 //   let text = document.getElementById('new-post').value;
@@ -41,10 +41,10 @@ let addPost = () => {
 
 let onPostChange = () => {
   let text = newPostElement.current.value;
-  //props.updateNewPostText (text);
+  props.updateNewPostText (text);
   //let action = ({ type: "UPDATE-NEW-POST-TEXT", newText: text });
-  let action = updateNewPostTextActionCreator(text);
-  props.dispatch (action);
+  //let action = updateNewPostTextActionCreator(text);
+  //props.dispatch (action);
   //console.log (text);
 }
  
