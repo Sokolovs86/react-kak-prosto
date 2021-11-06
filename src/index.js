@@ -7,8 +7,7 @@ import store from './redux/redux-store';
 import { BrowserRouter } from "react-router-dom";
 import {Provider} from "react-redux";
 
-let rerenderEntireTree = () => {
-  ReactDOM.render(
+ReactDOM.render(
     <BrowserRouter>
       <Provider store={store}>
       <App
@@ -20,12 +19,10 @@ let rerenderEntireTree = () => {
     </Provider>
     </BrowserRouter>, document.getElementById("root")
   );
-};
 
 // import Dialogs from './components/Dialogs/Dialogs';
 
 // addPost('Niger, Hi))');
 
-rerenderEntireTree();
 
 reportWebVitals();
