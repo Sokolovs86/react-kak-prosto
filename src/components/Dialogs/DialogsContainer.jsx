@@ -26,6 +26,19 @@ const DialogsContainer = () => {
            </StoreContext.Consumer>
 }
 
-const SuperDialogsContainer = connect () (Dialogs);
+let f1 = () => {
+    return {
+        a: 1,
+        b: 2,
+    };
+};
+
+let f2 = () => {
+    return {
+        c: 3,
+    };
+};
+
+const SuperDialogsContainer = connect (f1, f2) (Dialogs);
 
 export default DialogsContainer;
