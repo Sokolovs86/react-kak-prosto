@@ -1,6 +1,5 @@
 import React from 'react';
 import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/profile-reducer";
-import StoreContext from '../../../StoreContext';
 import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
 
@@ -18,7 +17,7 @@ import {connect} from "react-redux";
             dispatch(action);
         },
         addPost: () => {
-            store.dispatch(addPostActionCreator());
+            dispatch(addPostActionCreator());
         }
     }
 }
