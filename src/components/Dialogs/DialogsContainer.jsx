@@ -32,13 +32,13 @@ let mapStateToProps = (state) => {
     };
 };
 
-let mapDispatchToProps = () => {
+let mapDispatchToProps = (dispatch) => {
     return {
       updateNewMessageBody: () => {
-          store.dispatch(sendMessageCreator());
+          dispatch(sendMessageCreator());
       },
-      sendMessage: () => {
-          store.dispatch(updateNewMessageBodyCreator(body));
+      sendMessage: (body) => {
+          dispatch(updateNewMessageBodyCreator(body));
       },
     };
 };
