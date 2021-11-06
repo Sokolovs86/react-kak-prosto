@@ -28,4 +28,19 @@ const MyPostsContainer = (props) => {
     );
 }
 
+// let mapStateToProps = (state) => {
+//     return {
+//         profilePage: state.profilePage
+//     };
+// };
+
+// let mapDispatchToProps = (dispatch) => {
+//     return {
+//       updateNewPostText: () => {
+//           dispatch(updateNewPostTextActionCreator());
+//       },
+
+//     };
+// };
+
 export default MyPostsContainer;
