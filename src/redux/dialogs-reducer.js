@@ -25,7 +25,7 @@ const dialogsReducer = (state = initialState, action) => {
   // stateCopy.messages = [...state.messages];
 let stateCopy = {
   ...state,
-  //messages: [...state.messages]
+  messages: [...state.messages]
 };
 
   switch (action.type) {
