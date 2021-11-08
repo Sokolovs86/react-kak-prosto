@@ -6,7 +6,7 @@ let initialState = {
   users: [
     {
       id: 1,
-      photoUrl: "https://www.ejin.ru/wp-content/uploads/2018/10/crew4_1024.png",
+      photoUrl: "https://cs13.pikabu.ru/avatars/2729/x2729750-428926448.png",
       followed: false,
       fullName: "Dmitri D.",
       status: "I'm boss",
@@ -14,7 +14,7 @@ let initialState = {
     },
     {
       id: 2,
-      photoUrl: "https://www.ejin.ru/wp-content/uploads/2018/10/crew4_1024.png",
+      photoUrl: "https://cs13.pikabu.ru/avatars/2729/x2729750-428926448.png",
       followed: true,
       fullName: "Elena M.",
       status: "I'm the best",
@@ -22,7 +22,7 @@ let initialState = {
     },
     {
       id: 3,
-      photoUrl: "https://www.ejin.ru/wp-content/uploads/2018/10/crew4_1024.png",
+      photoUrl: "https://cs13.pikabu.ru/avatars/2729/x2729750-428926448.png",
       followed: false,
       fullName: "Isabella F.",
       status: "I'm cool",
@@ -30,7 +30,7 @@ let initialState = {
     },
     {
       id: 4,
-      photoUrl: "https://www.ejin.ru/wp-content/uploads/2018/10/crew4_1024.png",
+      photoUrl: "https://cs13.pikabu.ru/avatars/2729/x2729750-428926448.png",
       followed: true,
       fullName: "Peter G.",
       status: "I'm hungry",

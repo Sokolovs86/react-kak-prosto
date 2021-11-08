@@ -6,7 +6,7 @@ let Users =(props) =>{
        props.users.map(u => <div key={u.id}>
        <span>
            <div>
-               <img />
+               <img src={u.photoUrl}/>
            </div>
            <div>
                <button>Follow</button>
