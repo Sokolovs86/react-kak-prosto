@@ -23,21 +23,13 @@ const App = (props) => {
       <Header />
       <Navbar />
       <div className="app-wrapper-content">
-        
-        <Route
-          path="/dialogs"
-          //render={() => <Dialogs store={props.store} />} />
+        <Route path="/dialogs" 
           render={() => <DialogsContainer />} />
-        <Route
-          path="/profile"
-          // render={() => (
-          //   <Profile
-          //     profilePage={props.state.profilePage}
-          //     dispatch={props.dispatch}
-          render={() => <Profile /> } />
-        {/* <Route path="/dialogs" render={() => <News />} />
-          <Route path="/dialogs" render={() => <Music />} />
-          <Route path="/dialogs" render={() => <Settings />} /> */}
+        <Route path="/profile" 
+          render={() => <Profile />} />
+        <Route path="/users"
+          render={() => <div />}
+        />
       </div>
     </div>
   );
