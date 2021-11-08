@@ -9,6 +9,7 @@ import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
+import Users from "./components/Users/Users";
 //import { updateNewPostText } from "./redux/store";
 
 // let SomeComponent = () => <Dialogs />
@@ -28,7 +29,7 @@ const App = (props) => {
         <Route path="/profile" 
           render={() => <Profile />} />
         <Route path="/users"
-          render={() => <div>users</div>}
+          render={() => <Users />}
         />
       </div>
     </div>
