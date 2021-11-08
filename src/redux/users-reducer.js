@@ -2,11 +2,11 @@ const ADD_POST = "ADD-POST";
 const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
 
 let initialState = {
-  posts: [
-    { id: 1, message: "Hi, how are you?", likesCount: 15 },
-    { id: 2, message: "Cool, I'am the best", likesCount: 20 },
-    { id: 3, message: "Yo", likesCount: 10 },
-    { id: 4, message: "Hello bitch", likesCount: 5 },
+  users: [
+    { id: 1, fullName: "Dmitri D.", status: "I'm boss", location: {city: "Minsk", country: "Belarus"} },
+    { id: 2, fullName: "Elena M.", status: "I'm full", location: {city: "Moscow", country: "Russia"}},
+    { id: 3, fullName: "Isabella F..", status: "I'm cool", location: {city: "Toronto", country: "Canada"}},
+    { id: 4, fullName: "Peter G.", status: "I'm hungry", location: {city: "Kazan", country: "Sweden"}},
   ],
   newPostText: "it-kabzda", //"it-kabzda"
 };
