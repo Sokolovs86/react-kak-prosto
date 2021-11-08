@@ -4,10 +4,38 @@ const SET_USERS = "SET_USERS";
 
 let initialState = {
   users: [
-    // { id: 1, followed: false, fullName: "Dmitri D.", status: "I'm boss", location: {city: "Minsk", country: "Belarus"} },
-    // { id: 2, followed: true, fullName: "Elena M.", status: "I'm the best", location: {city: "Moscow", country: "Russia"}},
-    // { id: 3, followed: false,  fullName: "Isabella F.", status: "I'm cool", location: {city: "Toronto", country: "Canada"}},
-    // { id: 4, followed: true, fullName: "Peter G.", status: "I'm hungry", location: {city: "Oslo", country: "Sweden"}},
+    {
+      id: 1,
+      photoUrl: "https://www.ejin.ru/wp-content/uploads/2018/10/crew4_1024.png",
+      followed: false,
+      fullName: "Dmitri D.",
+      status: "I'm boss",
+      location: { city: "Minsk", country: "Belarus" },
+    },
+    {
+      id: 2,
+      photoUrl: "https://www.ejin.ru/wp-content/uploads/2018/10/crew4_1024.png",
+      followed: true,
+      fullName: "Elena M.",
+      status: "I'm the best",
+      location: { city: "Moscow", country: "Russia" },
+    },
+    {
+      id: 3,
+      photoUrl: "https://www.ejin.ru/wp-content/uploads/2018/10/crew4_1024.png",
+      followed: false,
+      fullName: "Isabella F.",
+      status: "I'm cool",
+      location: { city: "Toronto", country: "Canada" },
+    },
+    {
+      id: 4,
+      photoUrl: "https://www.ejin.ru/wp-content/uploads/2018/10/crew4_1024.png",
+      followed: true,
+      fullName: "Peter G.",
+      status: "I'm hungry",
+      location: { city: "Oslo", country: "Sweden" },
+    },
   ],
 };
 
