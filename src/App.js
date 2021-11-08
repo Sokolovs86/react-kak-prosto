@@ -28,7 +28,7 @@ const App = (props) => {
         <Route path="/profile" 
           render={() => <Profile />} />
         <Route path="/users"
-          render={() => <div />}
+          render={() => <div>users</div>}
         />
       </div>
     </div>
