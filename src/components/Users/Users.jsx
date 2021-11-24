@@ -3,8 +3,8 @@ import styles from './users.module.css'
 
 let Users = (props) => {
     if (props.users.length === 0) {
-        
-        props.setUsers( [
+        axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+            props.setUsers( [
     {
       id: 1,
       photoUrl: "https://cs13.pikabu.ru/avatars/2729/x2729750-428926448.png",
@@ -39,6 +39,8 @@ let Users = (props) => {
     },
 ],
     );
+        });
+        
 };
 
 
