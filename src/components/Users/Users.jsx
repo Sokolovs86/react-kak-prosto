@@ -3,6 +3,7 @@ import styles from './users.module.css'
 
 let Users = (props) => {
     if (props.users.length === 0) {
+        
         props.setUsers( [
     {
       id: 1,
