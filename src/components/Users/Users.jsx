@@ -5,7 +5,8 @@ import * as axios from 'axios';
 let Users = (props) => {
     if (props.users.length === 0) {
         axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => { 
-            props.setUsers(response.data.Items);
+  
+        props.setUsers(response.data.items);
         });
 
 };
@@ -16,7 +17,7 @@ let Users = (props) => {
        props.users.map(u => <div key={u.id}>
        <div>
            <div>
-               <img src={u.photoUrl} className={styles.userPhoto} />
+               <img src={u.photos.small} className={styles.userPhoto} />
            </div>
            <div>
             {u.followed
@@ -26,12 +27,12 @@ let Users = (props) => {
        </div>
        <div>
            <div>
-               <div>{u.fullName}</div>
+               <div>{u.name}</div>
                <div>{u.status}</div>
            </div>
            <div>
-               <div>{u.location.city}</div>
-               <div>{u.location.country}</div>
+               <div>{'u.location.city'}</div>
+               <div>{'u.location.country'}</div>
            </div>
        </div>
        </div>)
