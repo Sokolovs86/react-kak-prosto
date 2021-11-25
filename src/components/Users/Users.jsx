@@ -14,16 +14,16 @@ class Users extends React.Component {
     render() {
 
       let pagesCount = this.props.totalUsersCount / this.props.pageSize;
-
+      let pages = [];
+      for (i=0; i<pagesCount; i++); {
+          pages.push(i);
+        }
         return (
           <div>
             <div>
-                
-               <span>1</span>
-               <span>2</span>
-               <span className={styles.selectedPage}>3</span>
-               <span>4</span>
-               <span>5</span>
+                {pages.map( p => {
+                    <span className={true && styles.selectedPage}>{p}</span>
+                })}
             </div>
             {
                 this.props.users.map((u) => (
