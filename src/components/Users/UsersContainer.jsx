@@ -8,6 +8,7 @@ let mapStateToProps = (state) => {
         users: state.usersPage.users,
         pageSize: state.usersPage.pageSize,
         totalUsersCount: state.usersPage.totalUsersCount,
+        currentPage: state.usersPage.currentPage,
     }
 }
 

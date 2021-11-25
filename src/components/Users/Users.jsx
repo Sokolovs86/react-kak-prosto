@@ -22,7 +22,7 @@ class Users extends React.Component {
           <div>
             <div>
                 {pages.map( p => {
-                    <span className={true && styles.selectedPage}>{p}</span>
+                    <span className={this.props.currentPage===p && styles.selectedPage}>{p}</span>
                 })}
             </div>
             {
