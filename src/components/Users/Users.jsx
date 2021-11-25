@@ -12,9 +12,13 @@ class Users extends React.Component {
   }
   
     render() {
+
+      let pagesCount = this.props.totalUsersCount / this.props.pageSize;
+
         return (
           <div>
             <div>
+                
                <span>1</span>
                <span>2</span>
                <span className={styles.selectedPage}>3</span>
