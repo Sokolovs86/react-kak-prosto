@@ -43,12 +43,7 @@ class Users extends React.Component {
             return (
               <span
                 className={this.props.currentPage === p && styles.selectedPage}
-                onClick={(e) => {
-                  this.onPageChanged(p);
-                }}
-              >
-                {p}
-              </span>
+                onClick={(e) => {this.onPageChanged(p);}}>{p}</span>
             );
           })}
         </div>
