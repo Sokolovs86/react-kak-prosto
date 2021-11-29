@@ -36,7 +36,7 @@ class UsersAPIComponent extends React.Component {
       pages.push(i);
     }
 
-    return (
+    return  <Users /> (
       <div>
         <div>
           {pages.map((p) => {
@@ -51,28 +51,13 @@ class UsersAPIComponent extends React.Component {
           <div key={u.id}>
             <span>
               <div>
-                <img
-                  src={u.photos.small != null ? u.photos.small : userPhoto}
-                  className={styles.userPhoto}
-                />
+                <img src={u.photos.small != null ? u.photos.small : userPhoto} className={styles.userPhoto}/>
               </div>
               <div>
                 {u.followed ? (
-                  <button
-                    onClick={() => {
-                      this.props.unfollow(u.id);
-                    }}
-                  >
-                    Unfollow
-                  </button>
+                  <button onClick={() => {this.props.unfollow(u.id);}}> Unfollow </button>
                 ) : (
-                  <button
-                    onClick={() => {
-                      this.props.follow(u.id);
-                    }}
-                  >
-                    Follow
-                  </button>
+                  <button onClick={() => {this.props.follow(u.id);}}> Follow </button>
                 )}
               </div>
             </span>
