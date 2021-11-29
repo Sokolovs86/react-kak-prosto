@@ -38,7 +38,7 @@ class UsersContainer extends React.Component {
     return (
       <>
         {this.props.isFetching ? (
-          <div style={{ width: "450px", height: "300px" }}>
+          <div style={{ backgroundColor: 'whitesmoke'}}>
             <img src={preloader} alt={"downloading gif"} />
           </div>
         ) : null}
