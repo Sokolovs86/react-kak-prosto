@@ -93,4 +93,4 @@ class UsersAPIComponent extends React.Component {
   }
 }
 
-export default Users;
+export default UsersAPIComponent;
