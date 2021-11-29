@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import {follow,
         setCurrentPage,
         setUsers,
-        setUsersTotalCount,
+        setTotalUsersCount,
         toggleIsFetching,
         unfollow,} from '../../redux/users-reducer';
 import Users from './Users';
@@ -94,4 +94,11 @@ let mapStateToProps = (state) => {
 
 
 
-export default connect(mapStateToProps, {follow, unfollow, setUsers, setCurrentPage, setUsersTotalCount, toggleIsFetching,})(UsersContainer);
+export default connect(mapStateToProps, {
+    follow,
+    unfollow,
+    setUsers,
+    setCurrentPage,
+    setTotalUsersCount,
+    toggleIsFetching,
+  })(UsersContainer);
