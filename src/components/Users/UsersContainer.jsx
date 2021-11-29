@@ -5,6 +5,7 @@ import {followAC,setCurrentPageAC,setUsersAC,setUsersTotalCountAC,toggleIsFetchi
 import Users from './Users';
 import * as axios from 'axios';
 import preloader from '../../assets/images/preloader.gif';
+import Preloader from '../common/Preloader/Preloader';
 
 class UsersContainer extends React.Component {
   // class UsersContainer extends Component
@@ -37,11 +38,8 @@ class UsersContainer extends React.Component {
   render() {
     return (
       <>
-        {this.props.isFetching ? (
-          <div style={{ backgroundColor: 'whitesmoke'}}>
-            <img src={preloader} alt={"downloading gif"} />
-          </div>
-        ) : null}
+        {this.props.isFetching ? 
+        <Preloader /> : null}
         <Users
           totalUsersCount={this.props.totalUsersCount}
           pageSize={this.props.pageSize}
