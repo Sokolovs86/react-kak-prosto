@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
 //import React, { Component} from 'react';
-import { connect } from "react-redux";
-import {followAC,setCurrentPageAC,setUsersAC,setUsersTotalCountAC,unfollowAC,} from "../../redux/users-reducer";
-import Users from "./Users";
-import * as axios from "axios";
+import { connect } from 'react-redux';
+import {followAC,setCurrentPageAC,setUsersAC,setUsersTotalCountAC,unfollowAC,} from '../../redux/users-reducer';
+import Users from './Users';
+import * as axios from 'axios';
+import preloader from '../../assets/images/preloader.gif';
 
 class UsersContainer extends React.Component {
   // class UsersContainer extends Component
@@ -31,6 +32,8 @@ class UsersContainer extends React.Component {
 
   render() {
     return (
+        <>
+          {this.props.isFetching ? <img src={}/> : null}
       <Users
         totalUsersCount={this.props.totalUsersCount}
         pageSize={this.props.pageSize}
@@ -40,6 +43,7 @@ class UsersContainer extends React.Component {
         follow={this.props.follow}
         unfollow={this.props.unfollow}
       />
+      </>
     );
   }
 }
@@ -50,6 +54,7 @@ let mapStateToProps = (state) => {
     pageSize: state.usersPage.pageSize,
     totalUsersCount: state.usersPage.totalUsersCount,
     currentPage: state.usersPage.currentPage,
+    isFetching: state.usersPage.isFetching,
   };
 };
 
