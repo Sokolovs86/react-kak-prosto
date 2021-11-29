@@ -33,7 +33,7 @@ class UsersContainer extends React.Component {
   render() {
     return (
         <>
-          {this.props.isFetching ? <img src={}/> : null}
+          {this.props.isFetching ? <img src={preloader} alt={'downloading gif'}/> : null}
       <Users
         totalUsersCount={this.props.totalUsersCount}
         pageSize={this.props.pageSize}
