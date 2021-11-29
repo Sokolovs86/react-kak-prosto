@@ -13,16 +13,27 @@ let Users = (props) => {
         pages.push(i);
     }
 
-  return  (
-      <div>
+  // return  (
+  //     <div>
+  //       <div>
+  //         {pages.map((p) => {
+  //           return (
+  //             <span
+  //               className={props.currentPage === p && styles.selectedPage}
+  //               onClick={(e) => {
+  //                 props.onPageChanged(p);
+  //                 }}>{p}</span>
+  //           );
+  //         })}
+  //       </div>
+   return <div>
         <div>
-          {pages.map((p) => {
-            return (
-              <span
-                className={props.currentPage === p && styles.selectedPage}
-                onClick={(e) => {this.onPageChanged(p);}}>{p}</span>
-            );
-          })}
+            {pages.map(p => {
+                return <span className={props.currentPage === p && styles.selectedPage}
+                             onClick={(e) => {
+                                 props.onPageChanged(p);
+                             }}>{p}</span>
+            })}
         </div>
         {props.users.map((u) => (
           <div key={u.id}>
@@ -51,7 +62,6 @@ let Users = (props) => {
           </div>
         ))}
       </div>
-    );
 }
 
 export default Users;
