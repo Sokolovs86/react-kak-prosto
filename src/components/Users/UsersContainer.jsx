@@ -1,7 +1,7 @@
 import React from 'react';
 //import React, { Component} from 'react';
 import { connect } from 'react-redux';
-import {followAC,setCurrentPageAC,setUsersAC,setUsersTotalCountAC,unfollowAC,} from '../../redux/users-reducer';
+import {followAC,setCurrentPageAC,setUsersAC,setUsersTotalCountAC,toggleIsFetchingAC,unfollowAC,} from '../../redux/users-reducer';
 import Users from './Users';
 import * as axios from 'axios';
 import preloader from '../../assets/images/preloader.gif';
@@ -74,6 +74,9 @@ let mapDispatchToProps = (dispatch) => {
     },
     setTotalUsersCount: (totalCount) => {
       dispatch(setUsersTotalCountAC(totalCount));
+    },
+    toggleIsFetching: (isFetching) => {
+      dispatch(toggleIsFetchingAC(isFetching))
     },
   };
 };
