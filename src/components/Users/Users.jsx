@@ -48,17 +48,22 @@ let Users = (props) => {
                 {u.followed
                     ? <button onClick={() => {
 
-                        axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/{u.id}`, {
-                            withCredentials: true,
-                            headers: {
-                                "API-KEY": "dbfdcf64-db73-40df-b638-b5db6bb945f8"
+                        axios
+                          .delete(
+                            `https://social-network.samuraijs.com/api/1.0/follow/{u.id}`,
+                            {
+                              withCredentials: true,
+                              headers: {
+                                "API-KEY":
+                                  "678573af-50ae-44dc-a2da-38c8b0759136",
+                              },
                             }
-                        })
-                            .then((response) => {
-                                if (response.data.resultCode ==0) {
-                                    props.unfollow(u.id);
-                                }
-                            });
+                          )
+                          .then((response) => {
+                            if (response.data.resultCode == 0) {
+                              props.unfollow(u.id);
+                            }
+                          });
 
                         props.unfollow(u.id);
 
@@ -66,17 +71,23 @@ let Users = (props) => {
 
                     : <button onClick={() => {
 
-                        axios.post(`https://social-network.samuraijs.com/api/1.0/follow/{u.id}`, null, {
-                            withCredentials: true,
-                            headers: {
-                                "API-KEY": "dbfdcf64-db73-40df-b638-b5db6bb945f8"
+                        axios
+                          .post(
+                            `https://social-network.samuraijs.com/api/1.0/follow/{u.id}`,
+                            null,
+                            {
+                              withCredentials: true,
+                              headers: {
+                                "API-KEY":
+                                  "678573af-50ae-44dc-a2da-38c8b0759136",
+                              },
                             }
-                        })
-                            .then((response) => {
-                                if (response.data.resultCode ==0) {
-                                    props.follow(u.id);
-                                }
-                            });
+                          )
+                          .then((response) => {
+                            if (response.data.resultCode == 0) {
+                              props.follow(u.id);
+                            }
+                          });
 
 
                         props.follow(u.id);
