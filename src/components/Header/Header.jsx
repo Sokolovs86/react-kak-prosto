@@ -1,6 +1,6 @@
 import React from 'react';
-import ss from'./Header.module.css';
-import {NavLink} from "react-router-dom";
+import ss from './Header.module.css';
+import {NavLink} from 'react-router-dom';
 
 const Header = (props) => {
     return <header className={ss.header}>
