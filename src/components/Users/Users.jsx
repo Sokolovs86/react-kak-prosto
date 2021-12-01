@@ -11,6 +11,8 @@ let Users = (props) => {
     pages.push(i);
   }
 
+
+
   return (
     <div>
       <div>
@@ -39,23 +41,10 @@ let Users = (props) => {
               </NavLink>
             </div>
             <div>
-              {u.followed ? (
-                <button
-                  onClick={() => {
-                    props.unfollow(u.id);
-                  }}
-                >
-                  Unfollow
-                </button>
-              ) : (
-                <button
-                  onClick={() => {
-                    props.follow(u.id);
-                  }}
-                >
-                  Follow
-                </button>
-              )}
+              {u.followed 
+              ? <button onClick={() => {props.unfollow(u.id);}}>Unfollow</button>
+              : <button onClick={() => {props.follow(u.id);}}>Follow</button>
+              }
             </div>
           </span>
           <span>
