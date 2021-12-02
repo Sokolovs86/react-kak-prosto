@@ -44,6 +44,7 @@ let Users = (props) => {
             <div>
               {u.followed 
               ? <button disabled = {props.followingInProgress} onClick={() => {
+                  
                   props.toggleFollowingInProgress(true);
                   axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, 
                     {
