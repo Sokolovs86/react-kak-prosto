@@ -1,4 +1,4 @@
-import {userAPI} from "../api/api";
+import {usersAPI} from "../api/api";
 
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
@@ -79,7 +79,7 @@ export const getUsers = (currentPage, pageSize) =>{
   return (dispatch) => {
     dispatch(toggleIsFetching(true));
 
-    userAPI.getUsers (currentPage, pageSize)
+    usersAPI.getUsers (currentPage, pageSize)
         .then((data) => {
           dispatch(toggleIsFetching(false));
           dispatch(setUsers(data.items));
