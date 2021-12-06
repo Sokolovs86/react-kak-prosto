@@ -17,18 +17,13 @@ import { userAPI } from '../../api/api';
 
 class UsersContainer extends React.Component {
   componentDidMount() {
-    this.props.getUsersThunkCreator();
-   /* this.props.toggleIsFetching(true);
-
-    userAPI.getUsers (this.props.currentPage, this.props.pageSize)
-        .then((data) => {
-              this.props.toggleIsFetching(false);
-              this.props.setUsers(data.items);
-              this.props.setTotalUsersCount(data.totalCount);
-      });*/
+    this.props.getUsers(this.props.currentPage, this.props.pageSize);
   }
 
   onPageChanged = (pageNumber) => {
+
+    this.props.getUsers(pageNumber, this.props.pageSize);
+
     this.props.setCurrentPage(pageNumber);
     this.props.toggleIsFetching(true);
 
@@ -52,8 +47,7 @@ class UsersContainer extends React.Component {
           follow={this.props.follow}
           unfollow={this.props.unfollow}
           toggleFollowingInProgress={this.props.toggleFollowingInProgress}
-          followingInProgress={this.props.followingInProgress}
-        />
+          followingInProgress={this.props.followingInProgress}/>
       </>
     );
   }
@@ -78,5 +72,5 @@ export default connect(mapStateToProps, {
   setTotalUsersCount,
   toggleIsFetching,
   toggleFollowingInProgress,
-  getUsersThunkCreator
-})(UsersContainer);
+  getUsers: getUsersThunkCreator,
+}) (UsersContainer);
