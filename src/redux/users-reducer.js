@@ -90,13 +90,13 @@ export const getUsers = (currentPage, pageSize) =>{
 export const follow = (userId) => {
 
   return (dispatch) => {
-     dispatch (toggleFollowingInProgress(true, userId));
-     usersAPI.follow(userId).then((response) => {
-       if (response.data.resultCode == 0) {
-         dispatch (followSuccess(userId));
-       }
-       dispatch(toggleFollowingInProgress(false, userId));
-     });
+    dispatch (toggleFollowingInProgress(true, userId));
+    usersAPI.follow(userId).then((response) => {
+      if (response.data.resultCode == 0) {
+        dispatch (followSuccess(userId));
+      }
+      dispatch(toggleFollowingInProgress(false, userId));
+    });
   };
 };
 

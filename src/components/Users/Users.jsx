@@ -23,11 +23,7 @@ let Users = (props) => {
             <span
               className={props.currentPage === p && styles.selectedPage}
               onClick={(e) => {
-                props.onPageChanged(p);
-              }}
-            >
-              {p}
-            </span>
+                props.onPageChanged(p) }}>{p}</span>
           );
         })}
       </div>
@@ -36,10 +32,7 @@ let Users = (props) => {
           <span>
             <div>
               <NavLink to={"/profile/" + u.id}>
-                <img
-                  src={u.photos.small != null ? u.photos.small : userPhoto}
-                  className={styles.userPhoto}
-                />
+                <img src={u.photos.small != null ? u.photos.small : userPhoto} className={styles.userPhoto} />
               </NavLink>
             </div>
             <div>
