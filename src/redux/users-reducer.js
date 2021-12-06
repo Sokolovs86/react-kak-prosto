@@ -74,11 +74,12 @@ export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_C
 export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching,});
 export const toggleFollowingInProgress = (isFetching, userId) => ({type: TOGGLE_IS_FOLLOWING_PROCESS, isFetching, userId});
 
-export const getUsersThunkCreator = () =>{
+export const getUsersThunkCreator = (currentPage, pageSize) =>{
+
   return (dispatch) => {
     dispatch(toggleIsFetching(true));
 
-    userAPI.getUsers (this.props.currentPage, this.props.pageSize)
+    userAPI.getUsers (currentPage, pageSize)
         .then((data) => {
           dispatch(toggleIsFetching(false));
           dispatch(setUsers(data.items));
