@@ -1,12 +1,8 @@
-import React from "react";
-import {
-  sendMessageCreator,
-  updateNewMessageBodyCreator,
-} from "../../redux/dialogs-reducer";
-import DialogItem from "./DialogItem/DialogItem";
-import ss from "./Dialogs.module.css";
-import Message from "./Message/Message";
-import {Redirect} from "react-router-dom";
+import React from 'react';
+import DialogItem from './DialogItem/DialogItem';
+import ss from './Dialogs.module.css';
+import Message from './Message/Message';
+import {Redirect} from 'react-router-dom';
 
 const Dialogs = (props) => {
   //let state = props.store.getState().dialogsPage;
