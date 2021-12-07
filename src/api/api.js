@@ -1,5 +1,5 @@
-import React from "react";
-import * as axios from "axios";
+import React from 'react';
+import * as axios from 'axios';
 
 const instance = axios.create({
   withCredentials: true,
@@ -21,7 +21,7 @@ export const usersAPI = {
     return instance.post(`follow/${userId}`);
   },
   unfollow(userId) {
-    return instance.delete(`unfollow/${userId}`);
+    return instance.delete(`follow/${userId}`);
   },
   getProfile(userId) {
     return instance.get(`profile/` + userId);
@@ -31,8 +31,6 @@ export const usersAPI = {
 
 export const authAPI = {
   me() {
-    return instance.get(`me`, {
-          withCredentials: true
-        })
+    return instance.get(`auth/me` )
   }
 };
