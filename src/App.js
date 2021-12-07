@@ -10,6 +10,7 @@ import UsersContainer from './components/Users/UsersContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
 //import { updateNewPostText } from './redux/store';
 import HeaderContainer from "./components/Header/HeaderContainer";
+import LoginPage from './components/Login/Login';
 // let SomeComponent = () => <Dialogs />
 
 const App = (props) => {
@@ -22,12 +23,14 @@ const App = (props) => {
       <HeaderContainer />
       <Navbar />
       <div className="app-wrapper-content">
-        <Route path="/dialogs" 
+        <Route path="/dialogs"
           render={() => <DialogsContainer />} />
-        <Route path="/profile/:userId?"  
+        <Route path="/profile/:userId?"
           render={() => <ProfileContainer />} />
         <Route path="/users"
-          render={() => <UsersContainer />}
+          render={() => <UsersContainer />} />
+        <Route path="/login"
+          render={() => <LoginPage />}
         />
       </div>
     </div>
