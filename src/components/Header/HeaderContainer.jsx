@@ -6,7 +6,7 @@ import {authAPI} from '../../api/api';
 
 class HeaderContainer extends React.Component {
     componentDidMount() {
-        this.props.setAuthUserData();
+        this.props.getAuthUserData();
     }
 
     render() {
