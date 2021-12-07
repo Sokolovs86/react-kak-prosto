@@ -1,10 +1,10 @@
-const SET_USER_DATA = 'SET_USER_DATA';
+const SET_USER_DATA = "SET_USER_DATA";
 
 let initialState = {
   userId: null,
   email: null,
   login: null,
-  isAuth: false
+  isAuth: false,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -13,7 +13,7 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         ...action.data,
-        isAuth: true
+        isAuth: true,
       };
 
     default:
