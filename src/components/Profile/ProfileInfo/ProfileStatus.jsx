@@ -5,11 +5,13 @@ class ProfileStatus extends React.Component {
 
     state = {
         editMode: false,
+        title: 'YOOOOOO',
     }
 
     activateEditMode = () => {
-        
-        this.state.editMode = true;
+        this.setState({
+            editMode: true,
+        })
     };
 
     render () {
