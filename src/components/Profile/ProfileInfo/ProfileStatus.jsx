@@ -1,18 +1,28 @@
-import React from "react";
-import ss from "./ProfileInfo.module.css";
+import React from 'react';
+import ss from './ProfileInfo.module.css';
 
-const ProfileStatus = (props) => {
+class ProfileStatus extends React.Component {
 
-    return (
-        <div>
+    state = {
+        editMode: false,
+    }
+
+    render () {
+        return (
             <div>
-                <span>{props.status}</span>
+                {!this.state.editMode &&
+                    <div>
+                        <span onDoubleClick={ ()=> {alert('pi-pi')}}>{this.props.status}</span>
+                    </div>
+                }
+                {this.state.editMode &&
+                    <div>
+                        <input value={this.props.status}/>
+                    </div>
+                }
             </div>
-            <div>
-                <input value = {props.status} />
-            </div>
-        </div>
-    );
+        );
+    };
 };
 
 export default ProfileStatus;
