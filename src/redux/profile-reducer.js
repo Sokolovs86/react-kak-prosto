@@ -58,12 +58,22 @@ export const setStatus = (status) => ({type: SET_STATUS, status });
 
 export const getUserProfile = (userId) => (dispatch) => {
   profileAPI.getStatus(userId).then((response) => {
+    debugger
     dispatch(setUserProfile(response.data) );
+  });
+};
+
+export const updateStatus = (status) => (dispatch) => {
+  usersAPI.updateStatus(status).then((response) => {
+    if (response.data.resultCode == 0) {
+      dispatch(setStatus(status));
+  }
   });
 };
 
 export const getStatus = (userId) => (dispatch) => {
   usersAPI.getProfile(userId).then((response) => {
+    debugger
     dispatch(setStatus(response.data) );
   });
 };
