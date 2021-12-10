@@ -5,12 +5,11 @@ class ProfileStatus extends React.Component {
 
     state = {
         editMode: false,
-        title: 'YOOOOOO',
     }
 
     activateEditMode = () => {
         //debugger;
-        ///console.log ('this:', this);
+        //console.log ('this:', this);
         this.setState({
             editMode: true,
         });
