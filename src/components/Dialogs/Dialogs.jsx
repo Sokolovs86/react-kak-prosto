@@ -29,31 +29,14 @@ const Dialogs = (props) => {
     props.updateNewMessageBody(body);
   };
 
+  let addNewMessage = (values) => {
+    props.sendMessage(values.newMessageBody);
+  };
+
   if (!props.isAuth) return <Redirect to = {"/login"} />;
-  // let newMessageElement = React.createRef();
-
-  // let addMessages = () => {
-  // let text = newMessageElement.current.value;
-  // alert(text);
-  // }
-
-  // let d= {
-  //   id: 2,
-  //   name: 'Dimas',
-  // };
 
   return (
     <div className={ss.dialogs}>
-      {/* <h3>My messages</h3>
-      <div>
-        <div>
-          <textarea ref={newMessageElement}></textarea>
-        </div>
-        <div>
-          <button onClick={addMessages}>Add message</button>
-        </div>
-      </div> */}
-
       <div className={ss.dialogsItems}>
         {dialogsElements}
       </div>
@@ -61,7 +44,7 @@ const Dialogs = (props) => {
         <div>{messagesElements}</div>
 
       </div>
-      <AddMessageFormRedux />
+      <AddMessageFormRedux onSubmit={addNewMessage} />
     </div>
   );
 };
@@ -78,6 +61,5 @@ const AddMessageForm = (props) => {
 }
 
 const AddMessageFormRedux = reduxForm({form: "dialogAddMessageForm"})(AddMessageForm);
-
 
 export default Dialogs;
