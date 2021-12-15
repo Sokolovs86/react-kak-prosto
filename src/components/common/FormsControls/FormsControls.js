@@ -1,7 +1,5 @@
 const Textarea = (props) => {
     <div>
-        <textarea>
-            
-        </textarea>
+        <textarea />
     </div>
 }
